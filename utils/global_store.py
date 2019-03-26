@@ -23,7 +23,7 @@ class GlobalStore(object):
         self.rds.set(k_component_verify_ticket, ticket)
 
     def get_component_verify_ticket(self):
-        self.rds.get(k_component_verify_ticket)
+        return self.rds.get(k_component_verify_ticket)
 
     # 第三方平台令牌
     def set_component_access_token(self, token, ex):
